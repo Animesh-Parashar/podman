@@ -1,5 +1,9 @@
 # Release Notes
 
+## 5.8.5
+### Bugfixes
+- Fixed a bug where Podman Machine VMs on Mac using the libkrun provider could be regularly turned off by a port-scanning process on the host unintentionally commanding the VM to shut down.
+
 ## 5.8.4
 ### Security
 - This release addresses CVE-2026-57231, where a malicious image using malformed `Env` entries could cause host environment variables to leak into containers run based on the image, including the ability to use the `*` glob operator to leak large numbers of environment variables without knowing their exact names ([GHSA-4hq8-gpf5-8p68](https://github.com/podman-container-tools/podman/security/advisories/GHSA-4hq8-gpf5-8p68)).
