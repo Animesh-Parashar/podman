@@ -670,7 +670,7 @@ run-docker-py-tests:
 	rm -f test/__init__.py
 
 .PHONY: localunit
-localunit: test/goecho/goecho test/version/version ## Run unit tests with coverage
+localunit: $(GINKGO) test/goecho/goecho test/version/version ## Run unit tests with coverage
 	rm -rf ${COVERAGE_PATH} && mkdir -p ${COVERAGE_PATH}
 	UNIT=1 $(GINKGO) \
 		-r \
@@ -1013,6 +1013,9 @@ install.tools: .install.golangci-lint ## Install development tools (linters, etc
 .PHONY: .install.ginkgo
 .install.ginkgo:
 	$(GO) build -o $(GINKGO) ./vendor/github.com/onsi/ginkgo/v2/ginkgo
+
+$(GINKGO):
+	$(MAKE) .install.ginkgo
 
 .PHONY: .install.golangci-lint
 .install.golangci-lint:
