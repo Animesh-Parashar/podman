@@ -13,7 +13,7 @@
 <br/>
 
 Podman (the POD MANager) is a tool for managing containers and images, volumes mounted into those containers, and pods made from groups of containers.
-Podman runs containers on Linux, but can also be used on Mac and Windows systems using a Podman-managed virtual machine.
+podman runs containers on Linux, but can also be used on Mac and Windows systems using a Podman-managed virtual machine.
 Podman is based on libpod, a library for container lifecycle management that is also contained in this repository. The libpod library provides APIs for managing containers, pods, container images, and volumes.
 
 Podman releases a new major or minor release 4 times a year, during the second week of February, May, August, and November. Patch releases are more frequent and may occur at any time to get bugfixes out to users. All releases are PGP signed. Public keys of members of the team approved to make releases are located [here](https://github.com/containers/release-keys/tree/main/podman).
